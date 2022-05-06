@@ -25,7 +25,7 @@ class ProductsController extends AbstractController
     {
     }
 
-    #[Route('/products/{id}/lowest-price', name: 'lowest-price', methods: 'POST')]
+    #[Route('/api/products/{id}/lowest-price', name: 'lowest-price', methods: 'POST')]
     public function lowestPrice(
         Request $request,
         int $id,
@@ -63,7 +63,7 @@ class ProductsController extends AbstractController
         return new Response($responseContent, 200, ['Content-Type' => 'application/json']);
     }
 
-    #[Route('/products/{id}/promotions', name: 'promotions', methods: 'GET')]
+    #[Route('/api/products/{id}/promotions', name: 'promotions', methods: 'GET')]
     public function promotions()
     {
 
